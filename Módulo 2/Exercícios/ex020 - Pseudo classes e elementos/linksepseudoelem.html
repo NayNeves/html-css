@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ept-brn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {    /*configurações normais dos links, quando ainda nao foi visitado*/
+            color: aqua;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:visited {      /*configurações quando o link ja foi clicado*/
+            color: darkblue;
+        }
+
+        a:hover {     /*configurações quando encosta o mouse no link*/
+            color: blue;
+            text-decoration: underline;
+        }
+
+        a:active {       /*configurações quando clica no link*/
+            color: yellow;
+        }
+
+        a::before {   /*pseudo elemento, lê-se "antes de todos os links, vai aparecer as configurações abaixo:.*/
+            content: '⇒ ';
+            text-decoration: none;
+            font-weight: normal;
+            color: grey;
+        }
+        .especial::after {    /*pseudo elemento, lê-se "depois dos elementos que tiverem com 'especial', vai aparecer as configurações abaixo:*/
+            content: ' ⇐';
+            text-decoration: none;
+            font-weight: normal;
+            color: grey;
+        }
+
+        .especial {
+            background-color: rgb(255, 159, 159);
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://github.com/gustavoguanabara" target="_blank">Repositório Github</a></li>
+        <li><a href="https://www.youtube.com/c/CursoemV%C3%ADdeo" target="blank" class="especial">Canal Youtube</a></li>
+        <li><a href="https://www.cursoemvideo.com/" target="_blank" class="especial">Site do CursoemVideo</a></li>
+    </ul>
+</body>
+</html>

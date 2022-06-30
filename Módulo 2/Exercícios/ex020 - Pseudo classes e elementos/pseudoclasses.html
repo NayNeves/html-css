@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesudo-classes</title>
+    <style>
+        div { 
+            display: inline-block; /*fica tudo na mesma linha*/
+            background-color: lightgrey;
+            border: 1px solid black;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+        /* Apalavra-chave adicionada às declarações de um seletor após um sinal de dois pontos e especificam um estado especial de um elemento. Existem várias pseudo-classes para estilos, podemos
+        citar :hover, :visited, :active, :checked, :empty e :focus.
+        - Hover: quando passar o mouse por cima, ele aparece outra coisa.*/
+
+        div:hover {   
+            background-color: yellow;
+
+        }   
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+</body>
+</html>

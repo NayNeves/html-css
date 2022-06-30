@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem flexível</title>
+    <link rel="shortcut icon" href="imagens desafio 7/favicon.ico" type="image/x-icon"> <!--para colocar favicon, baixar no site ou criar e colocar caminho no href-->
+</head>
+<body>
+    <h1>Imagem flexível</h1>
+    <p>Você está vendo a imagem completa? Experimente ampliar o tamanho da sua janela para aproveitar a melhor experiência &#x1F609</p> <!--para colocar emoji, pegar o código na emojipedia e colocar depois de "&#x"-->
+    
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens desafio 7/paisagem-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens desafio 7/paisagem-m.png" type="image/png">
+        <img src="imagens desafio 7/paisagem-g.png" alt="imagem g">
+        <!--aqui está dizendo, carregue a imagem g apenas se ela tiver até 1050px; senao, carregue a m; mas se a m tiver mais que 750px, carregue a p. Isso serve para adaptar a imagem de acordo com os dispositivos que o usuário está utilizando para navegação, permitindo que a imagem se adapte de forma mais fácil.-->
+    </picture>
+</body>
+</html>

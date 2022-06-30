@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor:</p>
+    <video width="560" poster="imagens/imagem png.png" controls>  <!--o widht é o tamanho, como estava mto grande colocamos 560-->
+        <source src="midia/video mp4.mp4" type="video/mp4">
+        <source src="midia/video m4v.m4v" type="video/mp4">
+        <source src="midia/video webm.webm" type="video/webm">
+        <source src="midia/video ogv.ogv" type="video/ogg">
+        <p>Seu navegador não tem compatibilidade com vídeos!</p>
+        <!--mesma coisa do áudio, se nao executar em todos os formatos, vai aparecer a mensagem; Guana aconselhou sempre colocar todos os formatos de video possíveis, pois nem todos os navegadores leem todos os formatos. Fazer essa conversão com handbrake. O problema de hospedar no próprio site é o alto consumo de banda, pois imagina 1000 pessoas acessando esse site por dia, na melhor das hipoteses que é o mp4, vai 11 giba de consumo! Fica mto caro pro cliente. Deixar isso sempre bem claro.-->
+    </video>
+    <h1>Inserido vídeos do Youtube</h1>  <!--Mto bom dessa forma, pois gasta os dados do Youtube, e nao do servidor local. PREFERIR SEMPRE DESSA FORMA, pois como Google e YT são do mesmo dono, eles se conectam e recomendam um ao outro. Mas não pode pegar vídeos de outras pessoas! Isso mexe com os direitos autorais. A questão aqui é fazer uma conta, colocar seus vídeos no youtube, e fazer upload pro site dessa forma, através da incorporação. Mas esse serviço só funciona para vídeos onde todo mundo pode ver, ele nao limita, por exemplo, se for um site de facul e só os estudantes podem ver. Nesse caso, existem sites que oferecem esse serviço, por ex. o Vimeo (pago, mas tem videos gratuitos tbm, que ai pode fazer da mesma forma que no YT).-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1HlFxR56leg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h1>Inserindo vídeos do Vimeo</h1><!--mesmo caminho, procurar o video no site, ir em incorporar. Só que no vimeo dá pra colocar varias coisas, tipo nome do autor, cor, tamanho, etc.-->
+    <iframe src="https://player.vimeo.com/video/197093965?h=7fbc516b5a&color=ff9933&portrait=0" width="560" height="315" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>

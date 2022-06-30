@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags (tags de agrupamento)</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgrey;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        h1 {
+            box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.432) ;  /*deslocamento horizontal (direita), vertical (baixo), espalhamento, cor sombra. Inset é para sombra interna, o outset nao precisa escrever pois ja é padrão.*/
+        }
+
+        nav {
+            background-color: rgb(121, 109, 109);
+            padding: 3px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.315);
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+    
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px 0px; /*so 1 medida aplica para todos. 4 vai separado. 2 medidas ele considera: superior esquerda + inferior direita, e superior direita + inferior esquerda */
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.418);
+        }
+
+        article {
+            background-color: lightgray;
+        }
+
+        article > aside { 
+            background-color: rgb(112, 110, 110);
+            
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 4px;
+            margin: 0px;
+        }
+
+        footer > p {
+            margin: 0px;
+        }
+
+        div#bola {
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            background-color: white;
+            border-radius: 50%;  /*fica uma bola!*/
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Eportes, política e tecnologia no Brasil.</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Notícia sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe natus vitae alias quo officia voluptatum temporibus quisquam dolorem beatae sint, ratione repudiandae obcaecati quidem perspiciatis, ut possimus laudantium fuga quasi rem! Voluptatibus quasi hic commodi cupiditate earum quis placeat exercitationem similique reprehenderit eveniet odit corporis excepturi eum consequuntur, blanditiis voluptatem. Perferendis optio atque, animi, reiciendis mollitia voluptatibus eius facilis asperiores accusamus consectetur dignissimos cupiditate, labore natus. Magni eligendi placeat illo, praesentium voluptates atque sapiente! Animi repudiandae laudantium vel amet reiciendis, dignissimos corrupti atque quisquam ipsam vero ratione, delectus iure? Expedita corrupti explicabo omnis debitis harum quibusdam, vero laborum animi repellendus.</p>
+                <aside>
+                    <p>Artigo escrito por Antonio Neves.</p>
+                </aside>
+            </article>
+            <article>
+
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Nay Neves.</p>
+    </footer>
+    <div id="bola"></div>
+</body>
+</html>

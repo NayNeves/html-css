@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente em CSS</title>
+    <style>
+        /*configurações globais da CSS, o 100% é para funcionar os gradientes, para que eles peguem a página inteira */
+        * {
+            height: 100%;
+        }
+
+        body {  
+            /* radial gradiente faz um gradiente diferenciado entre as cores, primeiro escolhe como que vai ser a posição desse gradiente (circle), e depois colocar as cores */
+
+            /* linear gradiente faz um gradiente entre as cores, primeiro escolhe como que vai ser a posição desse gradiente (to top, bottom, left ou right OU 45deg (45° e outros graus)), e depois colocar as cores. Se colocar uma porcentagem depois, vai aumentar a cor. */            
+
+            background-image: linear-gradient(to top, #8F37FB 20%, #3532E3, #438CFA, #32C2E3, #1DFFC5);
+            background-attachment: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Testando gradientes</h1>
+</body>
+</html>

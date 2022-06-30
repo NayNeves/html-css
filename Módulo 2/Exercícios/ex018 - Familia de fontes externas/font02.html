@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas</title>
+    <style>
+        /* Para adicionar a fonte, devemos colocar o @font-face, e colocar exatamente o nome da fonte na url, e depois o formato dela. Existem os seguintes formatos de fonte: 
+        OTF=Opentype, 
+        TTF=Truetype, 
+        Embedded-Opentype, 
+        Truetype-aat (Apple Advanced Typography
+        svg
+        Sempre baixar nos 2 formatos e colocar os 2, pois dependendo do navegador, algum pode nao funcionar.        
+        */
+        
+        @font-face {
+            font-family: 'Best Valentina'; /*vc que dá o nome da fonte aqui*/
+            src: url('fonts/Best\ Valentina\ TTF.ttf') format('truetype'), url('fonts/Best\ Valentina\ OTF.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        h1 {
+            font-family: 'Best Valentina', Times, serif;
+            font-size: 3em;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Olá mundo!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel quibusdam, sequi ducimus enim hic provident voluptas beatae ad a veniam, natus temporibus praesentium facere ut magni expedita. Saepe et, alias assumenda quo enim dolore ullam incidunt aspernatur nostrum voluptas culpa soluta modi. Fuga quaerat deserunt saepe delectus voluptates sint quae.</p>
+</body>
+</html>

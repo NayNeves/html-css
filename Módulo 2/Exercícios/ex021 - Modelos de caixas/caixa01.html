@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+        h1 { /*caixa do tipo box level*/
+            background-color: lightpink;
+            height: 300px;
+            width: 300px;
+
+            border: 10px solid brown; /*shorthand: largura estilo cor.*/
+
+            padding: 10px 10px 10px 10px;  /*shorthand: topo direita baixo e esquerda. Ou se for tudo igual, pode colocar só uma vez o 10px. Se colocar só 2 valores, ele vai configurar o de cima e o debaixo iguais, e da esquerda e direita iguais.*/
+
+            margin: 20px auto 40px auto; /*margin auto é pra deixar no meio do navegador. Mesmas configurações do padding.*/
+
+            outline: 5px dashed salmon; /*shorthand: largura estilo cor.*/
+        
+        }
+
+        a { /*caixa do tipo inline level*/
+            display: block; /*dá pra mudar a caracteristica natural do elemnto com display!*/
+            border: 5px groove red;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Aninhamento é colocar uma caixa dentro da outra no HTML, ou seja, organizar os elemntos um dentro do outro e com certa.
+    - Box level: uma caixa que ocupa toda largura onde está inserida, e quebra o texto (h1 a h6, p, video, divs).
+    - Inline level: uma caixa que não quebra a linha, ela acompanha o conteúdo (a, code, button)-->
+
+    <h1>Exemplo de caixa box level</h1>
+    <p>Parágrafos também são exemplos de caixas box level, mas os <a href="#">links são exemplos de caixas inline level.</a> Vamos ver como tudo isso funciona.</p>
+</body>
+</html>
