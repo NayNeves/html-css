@@ -3,4 +3,4 @@
 
  Estou aprendendo a criar sites e agora vou gerenciar meus repositórios.
 
-<a href="https://nayneves.github.io/html-css/html-css/Módulo 1/Exercícios/ex001 - Tags básicas/index.html">Executar o exercício 001</a>
+<a href="https://nayneves.github.io/html-css/Módulo 1/Exercícios/ex001 - Tags básicas/index.html">Executar o exercício 001</a>
