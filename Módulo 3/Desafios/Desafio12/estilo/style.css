@@ -1,14 +1,31 @@
 @charset "UTF-8";
 
+/*fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*sempre colocar as cores da paleta aqui na variável root, depois é so usar a cor. Colocar fontes também. ISSO AJUDA MTO, pois se trocar as cores, nao precisa ir em cada declaração, é so mexer no root!*/
+:root {
+    --cor0: black;
+    --cor1: #565C4F;
+    --cor2: #031402;
+
+    --fonte-padrão: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-cabeçalho: 'Passion One', cursive;
+    --fonte-corpo: 'Sriracha', cursive;
+}
+
 * {
     padding: 0px;
     margin: 0px;
+    font-size: 1em;
 }
 
 
 html, body { 
     min-height: 100vh; /*tamanho minimo da view height*/
     background-color: darkgray; 
+    font-family: var(--fonte-padrão);
 }
 
 header {
@@ -23,13 +40,12 @@ header > h1 {
     padding-top: 50px;
     font-variant: small-caps; /*é letra maiuscula, mas com as primeiras maiores que o resto.*/
     font-family: var(--fonte-cabeçalho);
-    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela*/
+    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela. É %.*/
 }
 
 header > p {
     padding-bottom: 50px;
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: var(--fonte-padrão);
 }
 
 header a, footer a {
@@ -47,6 +63,8 @@ section {
     padding-bottom: 10vh;
     line-height: 2em; /*espaçamento duplo entre as linhas*/
     padding-left: 30px;
+    font-family: var(--fonte-corpo);
+    font-size: 3.5vw;
 
 }
 
@@ -61,7 +79,8 @@ section.imagem {
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block; /*ao inves de usar width, usamos o inline block, ai ele transforma de block para inline.*/
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.253);
 } 
 
@@ -78,25 +97,10 @@ footer {
     padding: 10px;
 }
 
-/*fonte externa*/
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
 
-/*fonte interna*/
-@font-face {
-    font-family: 'Sriracha'; 
-    src: url('fonts/Sriracha-Regular.ttf') format('truetype');
-    font-weight: normal;
-}
 
-/*sempre colocar as cores da paleta aqui na variável root, depois é so usar a cor. Colocar fontes também. ISSO AJUDA MTO, pois se trocar as cores, nao precisa ir em cada declaração, é so mexer no root!*/
-:root {
-    --cor0: black;
-    --cor1: #565C4F;
-    --cor2: #031402;
 
-    --fonte-corpo: 'Sriracha', cursive;
-    --fonte-cabeçalho: 'Passion One', cursive;
-}
+
 
 
 
