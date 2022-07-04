@@ -1,5 +1,83 @@
 @charset "UTF-8";
 
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+html, body { 
+    min-height: 100vh; /*tamanho minimo da view height*/
+    background-color: darkgray; 
+}
+
+header {
+    background-color: var(--cor0);
+    text-align: center;
+    color: white;
+
+    height: 280px;
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*é letra maiuscula, mas com as primeiras maiores que o resto.*/
+    font-family: var(--fonte-cabeçalho);
+    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela*/
+}
+
+header > p {
+    padding-bottom: 50px;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header a, footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;  /*espaçamento entre os paragrafos*/
+    padding-bottom: 10vh;
+    line-height: 2em; /*espaçamento duplo entre as linhas*/
+    padding-left: 30px;
+
+}
+
+section.normal {
+    background-color: white;
+    color: var(--cor0);
+}
+
+section.imagem {
+    background-color: var(--cor1);
+    color: white;
+}
+
+section.imagem > p {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.253);
+} 
+
+
+
+
+
+
+
+footer {
+    background-color: var(--cor0);
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
 /*fonte externa*/
 @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
 
@@ -20,42 +98,5 @@
     --fonte-cabeçalho: 'Passion One', cursive;
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-}
-
-header {
-    background-color: var(--cor0);
-    text-align: center;
-    height: 280px;
-    color: white;
-}
-header > h1 {
-    font-family: var(--fonte-cabeçalho);
-    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela*/
-    font-variant: small-caps;
-    padding-top: 50px;
-}
-
-header > p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-header a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
 
 
-header a:hover {
-    text-decoration: underline;
-}
-
-section > p {
-    margin-top: 50px;
-    padding: 10px 10px;
-    font-family: var(--fonte-corpo);
-    font-size: 3.5vw;
-}
