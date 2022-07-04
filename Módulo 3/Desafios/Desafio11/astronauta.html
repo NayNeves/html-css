@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space</title>
+    <style>
+        #fundo {
+            background-color: rgba(0, 0, 0, 0.582);
+            height: 100vh; /*100% da view port, a parte branca*/
+            background-image: url(images/espaco.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            position: relative;  /*dizer que essa imagem é a do fundo*/
+
+        }
+
+        #frente {
+            position: absolute; /*trazer imagem para frente*/
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="fundo">
+        <article id="frente">
+            <img src="images/astronauta.png" alt="">
+        </article>
+    </section>
+</body>
+</html>

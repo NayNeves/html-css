@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/*fonte externa*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+
+/*fonte interna*/
+@font-face {
+    font-family: 'Sriracha'; 
+    src: url('fonts/Sriracha-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+/*sempre colocar as cores da paleta aqui na variável root, depois é so usar a cor. Colocar fontes também. ISSO AJUDA MTO, pois se trocar as cores, nao precisa ir em cada declaração, é so mexer no root!*/
+:root {
+    --cor0: black;
+    --cor1: #565C4F;
+    --cor2: #031402;
+
+    --fonte-corpo: 'Sriracha', cursive;
+    --fonte-cabeçalho: 'Passion One', cursive;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background-color: var(--cor0);
+    text-align: center;
+    height: 280px;
+    color: white;
+}
+header > h1 {
+    font-family: var(--fonte-cabeçalho);
+    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela*/
+    font-variant: small-caps;
+    padding-top: 50px;
+}
+
+header > p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+header a:hover {
+    text-decoration: underline;
+}
+
+section > p {
+    margin-top: 50px;
+    padding: 10px 10px;
+    font-family: var(--fonte-corpo);
+    font-size: 3.5vw;
+}
