@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento vertical</title>
+    <style>
+        #container {
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+            position: relative; /*já vem padrão, mas é bom colocar, pois esse ficará atras.*/
+            height: 500px;
+            padding: 10px;
+            background-color: purple;
+        }
+
+        #conteudo {
+            background-image: url(images/target001.png);
+            background-size: 100% 100%;
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            position: absolute; /*usa para conseguir fazer o alinhamento vertical com left e top (a margin so funciona pro alinhamento horizontal).*/
+            left: 50%;
+            top: 50%;  /*o problema é que se fizer so isso, ele alinha no meio do container apenas a parte do left top do conteudo. Para resolver isso, temos que alterar pelo transform:*/
+
+            transform: translate(-50%, -50%); /*vai mexer no componente, o primeiro é horizontal e o segundo vertical.*/
+        }
+    </style>
+
+
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

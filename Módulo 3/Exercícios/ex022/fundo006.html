@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fundo fixo de tela</title>
     <style>
         body {
             height: 100vh;
+            /*
             background-image: url(images/wallpaper002.jpg);
             background-position: center center; /*colocando essa config, a imagem vai ficar centralizada por mais q se mexa no tamanho do navegador.*/
-            background-repeat: no-repeat; /*o no repeat faz com que a img centralizada apareça so 1 vez.*/
-            background-size: cover; /*cobrir a tela inteira 100% mas com cortes nas laterais, uma das  melhores opções! auto é automatico, contain mostra 100% mas sem corte.. é bom, mas depende do que vc precisa!*/
-            background-color: rgba(0, 0, 0, 0.582); /*é bom sempre colocar uma cor de fundo no site, mesmo que ele tenha uma imagem, pois caso demore o carregamento, fica mais atrativo pro usuário.*/
-            
+             /*background-repeat: no-repeat; /*o no repeat faz com que a img centralizada apareça so 1 vez.*/
+             /*background-size: cover; /*cobrir a tela inteira 100% mas com cortes nas laterais, uma das  melhores opções! auto é automatico, contain mostra 100% mas sem corte.. é bom, mas depende do que vc precisa!*/
+             /*background-color: rgba(0, 0, 0, 0.582); /*é bom sempre colocar uma cor de fundo no site, mesmo que ele tenha uma imagem, pois caso demore o carregamento, fica mais atrativo pro usuário.*/
+             /*background-attachment: fixed;*/
+        
+            /*o shorthand é nessa ordem: color image position repeat size attachment. O problema é que o o size nao funciona, entao nesse caso temos q retirá-lo da shorthand e colocar a parte:*/
+
+            background: rgba(0, 0, 0, 0.582) url(images/wallpaper002.jpg) center center no-repeat fixed;
+            background-size: cover;
         }
 
         main {
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px;
             margin: auto;
-            border: 1px solid darkmagenta;
+            border: 1px solid darkred;
             border-radius: 15px;
         }
     </style>
