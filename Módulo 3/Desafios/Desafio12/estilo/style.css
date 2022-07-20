@@ -15,7 +15,7 @@
     --fonte-corpo: 'Sriracha', cursive;
 }
 
-* {
+* {  /*configurações gerais, mto importante sempre pra zerar tudo!*/
     padding: 0px;
     margin: 0px;
     font-size: 1em;
@@ -29,18 +29,17 @@ html, body {
 }
 
 header {
-    background-color: var(--cor0);
+    background-color: black;
     text-align: center;
     color: white;
-
     height: 280px;
 }
 
 header > h1 {
     padding-top: 50px;
-    font-variant: small-caps; /*é letra maiuscula, mas com as primeiras maiores que o resto.*/
+    font-variant: small-caps; /*pra colocar letra maiuscula, mas com as primeiras maiores que o resto, melhor que text-transform.*/
     font-family: var(--fonte-cabeçalho);
-    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela. É %.*/
+    font-size: 10vw;  /*adaptar o tamanho da fonte ao tamanho da tela. É em %.*/
 }
 
 header > p {
@@ -49,12 +48,12 @@ header > p {
 }
 
 header a, footer a {
-    text-decoration: none;
+    text-decoration: none; /*tirar o sublinhado do link*/
     color: white;
     font-weight: bolder;
 }
 
-header a:hover, footer a:hover {
+header a:hover, footer a:hover { /*qdo passar o mouse em cima, fica sublinhado*/
     text-decoration: underline;
 }
 
@@ -62,19 +61,18 @@ section {
     padding-top: 10vh;  /*espaçamento entre os paragrafos*/
     padding-bottom: 10vh;
     line-height: 2em; /*espaçamento duplo entre as linhas*/
-    padding-left: 30px;
+    padding-left: 30px; /*espaçamento na esquerda, para nao ficar grudado na grade.*/
     font-family: var(--fonte-corpo);
     font-size: 3.5vw;
-
 }
 
 section.normal {
     background-color: white;
-    color: var(--cor0);
+    color: black;
 }
 
 section.imagem {
-    background-color: var(--cor1);
+    background-color: rgb(51, 51, 51);
     color: white;
 }
 
@@ -84,14 +82,8 @@ section.imagem > p {
     background-color: rgba(0, 0, 0, 0.253);
 } 
 
-
-
-
-
-
-
 footer {
-    background-color: var(--cor0);
+    background-color: black;
     text-align: center;
     color: white;
     padding: 10px;
