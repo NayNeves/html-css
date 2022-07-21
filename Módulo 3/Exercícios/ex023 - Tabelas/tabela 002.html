@@ -12,18 +12,41 @@
 
             table {
                 width: 500px;
-                border-collapse: collapse;
+                border-collapse: collapse; /*juntar as linhas da tabela*/
+                position: relative; /*configuração para deixar o cabeçalho fixo*/
             }
 
             td, th {
                 border: 1px solid black;
                 padding: 10px;
+            }
 
+            caption {
+                font-size: 1.5em;
+                font-weight: bold;
+                padding: 10px;
+                background-color: lightgray;
             }
 
             thead, tfoot {
                 background-color: gray;
                 color: white;
+            }
+
+            thead > tr > th {
+                position: sticky; /*para deixar o cabeçalho fixo.*/
+                top: -1px; /*para deixar o cabeçalho fixo.*/
+                background-color: gray; /*para deixar o cabeçalho fixo, tem que repetir a cor do background.*/
+            }
+
+            tbody > tr:nth-child(odd) {  /*pseudo classe que faz com que a cor seja aplicada a cada 2 linhas. 2n, 3n, ooou ODD e EVEN que tbm funcionam, que é ímpar e par respectivamente.*/
+                background-color: pink;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+            tbody > tr:nth-child(even) {  /*pseudo classe que faz com que a cor seja aplicada a cada 2 linhas. ODD e EVEN tbm funcionam, que é ímpar e par respectivamente.*/
+                background-color: lavender;
             }
 
             td.num {
@@ -37,16 +60,17 @@
      <!--
         Anatomia para tabelas GRANDES: 
         Table: tabela;
-            THEEAD (CABEÇA): tr, td, th
+            CAPTION (legenda, titulo da tabela): sem td, sem tr.
+            THEAD (CABEÇA): tr, td, th
             TBODY (CORPO): tr, td, th
             TFOOT (PÉ): tr, td, th
         -->
         <table>
-
+            <caption>Quantidade de aeronaves da Latam Brasil</caption>
             <thead>  <!--cabeça-->
                 <tr>
-                    <th>Aeronaves da Latam Brasil</th>
-                    <th>Quantidade</th>
+                    <th scope="col">Aeronaves da Latam Brasil</th> <!--o scope "col" é pra indicar que os dados desse cabeçalho estão embaixo.-->
+                    <th scope="col" style="width: 70px;">Quantidade</th>
                 </tr>
             </thead>
 
@@ -63,15 +87,95 @@
                     <td>Airbus A320neo</td>
                     <td class="num">6</td>
                 </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
+                <tr>
+                    <td>Airbus A320neo</td>
+                    <td class="num">6</td>
+                </tr>
             </tbody>
 
             <tfoot><!--pé-->
                 <tr>
-                    <th>Total de aeronaves</th>
+                    <th scope="row">Total de aeronaves</th> <!--o scope "row" é pra indicar que os dados desse cabeçalho estão ao lado direito.-->
                     <td class="num"><strong>90</strong></td>  <!--nao precisa colocar th nesse, pois ele nao é um titulo, é so um dado.-->
                 </tr>
             </tfoot>
         </table>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minima ipsum iusto deserunt a? Repudiandae, ipsam aspernatur molestiae sit perferendis, corporis explicabo nobis et distinctio delectus, culpa iste deserunt tempore! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam inventore illo repudiandae odit corrupti. Aliquam obcaecati mollitia maiores repellat consequatur ea perspiciatis minus sapiente laboriosam. Corrupti sequi quaerat earum deleniti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, voluptas eos at maxime alias nemo assumenda exercitationem adipisci, sit nihil, doloribus similique tempore officia ipsum mollitia ipsam dolore distinctio iure! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, doloremque maiores. Eum itaque repellendus ex at recusandae sunt cum nesciunt doloremque veritatis, maiores aperiam tempora iure est reprehenderit. At, odio.</p>
 </body>
 </html>
