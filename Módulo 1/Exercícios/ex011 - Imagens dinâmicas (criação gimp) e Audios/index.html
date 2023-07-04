@@ -9,7 +9,7 @@
 <body>
     <h1>Imagens dinâmicas</h1>
     <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
-    <picture> 
+    <picture>
         <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">                <!--serve para dizer ao navegador que vai vim uma imagem por ai-->
         <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">  <!--o tamanho maximo da imagem que vai carregar é 1050px; se caso nao tiver esse tamanho, ai vai carregar a imagem M-->
         <img src="imagens/foto-g.png" alt="imagem flexível"> 
@@ -18,7 +18,7 @@
 
     <h1>Reproduzindo áudios</h1>
     <p>Vamos aprender a reproduzir áudios em HTML:</p>
-    <audio src="midia/happy-mistake.mp3" controls autoplay></audio> <!--o autoplay deveria funcionar, mas nao funcionou..colocamos o controls e foi-->
+    <audio src="midia/happy-mistake.mp3" controls autoplay></audio> <!--só o autoplay deveria funcionar, mas só funcionou quando inserimos o controls-->
 
     <p>Outro forma, para ter mais compatibilidade:</p>
     <audio preload="metadata" autoplay controls loop> 
